@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-mgx-overview="icon" rel="icon" href="" />
+    <title data-mgx-overview="title">محمد الأسعد | مطور ويب</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta data-mgx-overview="description" name="description" content="محمد الأسعد - مطور مواقع ويب محترف | Mohamed Alas3d - Professional Web Developer" />
+    <meta data-mgx-overview="og:title" property="og:title" content="محمد الأسعد | مطور ويب" />
+    <meta data-mgx-overview="og:description" property="og:description" content="محمد الأسعد - مطور مواقع ويب محترف" />
+    <meta data-mgx-overview="og:image" property="og:image" content="https://public-frontend-1300249583.cos.ap-nanjing.myqcloud.com/commonfile/DefaultAppLogo.png" />
+    <meta data-mgx-overview="twitter:title" name="twitter:title" content="محمد الأسعد | مطور ويب" />
+    <meta data-mgx-overview="twitter:description" name="twitter:description" content="محمد الأسعد - مطور مواقع ويب محترف" />
+    <meta data-mgx-overview="twitter:image" name="twitter:image" content="https://public-frontend-1300249583.cos.ap-nanjing.myqcloud.com/commonfile/DefaultAppLogo.png" />
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-bracket">&lt;</span>
+                <span class="loader-name">M</span>
+                <span class="loader-bracket">/&gt;</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text" data-ar="محمد" data-en="Mohamed">محمد</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link" data-ar="من أنا" data-en="About">من أنا</a></li>
+                <li><a href="#projects" class="nav-link" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="#contact" class="nav-link" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <button id="menu-toggle" class="menu-btn" aria-label="Toggle Menu">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-links">
+            <li><a href="#home" class="mobile-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="#about" class="mobile-link" data-ar="من أنا" data-en="About">من أنا</a></li>
+            <li><a href="#projects" class="mobile-link" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+            <li><a href="#contact" class="mobile-link" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge" data-ar="مرحباً بالعالم 👋" data-en="Hello World 👋">مرحباً بالعالم 👋</div>
+            <h1 class="hero-title">
+                <span class="hero-greeting" data-ar="أنا" data-en="I'm">أنا</span>
+                <span class="hero-name" data-ar="محمد الأسعد" data-en="Mohamed Alas3d">محمد الأسعد</span>
+            </h1>
+            <div class="hero-role">
+                <span class="hero-role-prefix" data-ar="مطور" data-en="A">مطور</span>
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc" data-ar="أحوّل أفكارك إلى مواقع ويب استثنائية تجمع بين الجمال والأداء العالي" data-en="I transform your ideas into exceptional websites that combine beauty and high performance">أحوّل أفكارك إلى مواقع ويب استثنائية تجمع بين الجمال والأداء العالي</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" data-ar="استعرض أعمالي" data-en="View My Work">استعرض أعمالي</a>
+                <a href="#contact" class="btn btn-outline" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-ar="عميل سعيد" data-en="Happy Clients">عميل سعيد</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-title">index.js</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Mohamed Alas3d"</span>,
+  <span class="code-prop">skills</span>: [<span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building amazing web"</span>,
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>
+};</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span data-ar="اسحب للأسفل" data-en="Scroll Down">اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ar="تعرّف عليّ" data-en="Get to know me">&lt;تعرّف عليّ/&gt;</span>
+                <h2 class="section-title" data-ar="من أنا" data-en="About Me">من أنا</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro" data-ar="مرحباً! أنا محمد الأسعد، مطور مواقع ويب شغوف بتحويل الأفكار إلى تجارب رقمية مذهلة." data-en="Hello! I'm Mohamed Alas3d, a web developer passionate about turning ideas into stunning digital experiences.">مرحباً! أنا محمد الأسعد، مطور مواقع ويب شغوف بتحويل الأفكار إلى تجارب رقمية مذهلة.</p>
+                    <p class="about-detail" data-ar="أعمل على تصميم وتطوير مواقع ويب عصرية وسريعة ومتجاوبة مع جميع الأجهزة. أهتم بأدق التفاصيل لأقدم لعملائي أفضل تجربة مستخدم ممكنة." data-en="I design and develop modern, fast, and responsive websites for all devices. I pay attention to the finest details to deliver the best possible user experience to my clients.">أعمل على تصميم وتطوير مواقع ويب عصرية وسريعة ومتجاوبة مع جميع الأجهزة. أهتم بأدق التفاصيل لأقدم لعملائي أفضل تجربة مستخدم ممكنة.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span data-ar="محمد الأسعد" data-en="Mohamed Alas3d">محمد الأسعد</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86ebe9eee7ebe3e2b1e7eae7f5b5e2c6e1ebe7efeaa8e5e9eb">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span dir="ltr">+963 944 230 485</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-ar="سوريا" data-en="Syria">سوريا</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3 class="skills-title" data-ar="مهاراتي" data-en="My Skills">مهاراتي</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-wordpress"></i>
+                            <span>WordPress</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ar="أعمالي" data-en="My Work">&lt;أعمالي/&gt;</span>
+                <h2 class="section-title" data-ar="المشاريع" data-en="Projects">المشاريع</h2>
+                <p class="section-desc" data-ar="مجموعة من أحدث مشاريعي التي تعكس مهاراتي وإبداعي" data-en="A collection of my latest projects that reflect my skills and creativity">مجموعة من أحدث مشاريعي التي تعكس مهاراتي وإبداعي</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 1" data-en="Project 1">مشروع 1</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #96fbc4 0%, #f9f586 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 2" data-en="Project 2">مشروع 2</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 3" data-en="Project 3">مشروع 3</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 4" data-en="Project 4">مشروع 4</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #0c3483 0%, #a2b6df 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 5" data-en="Project 5">مشروع 5</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-slider">
+                        <div class="slider-images">
+                            <div class="slider-img active" style="background: linear-gradient(135deg, #ee9ca7 0%, #ffdde1 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #2af598 0%, #009efd 100%);"></div>
+                            <div class="slider-img" style="background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);"></div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-ar="مشروع 6" data-en="Project 6">مشروع 6</h3>
+                        <p class="project-desc" data-ar="وصف المشروع سيُضاف لاحقاً" data-en="Project description will be added later">وصف المشروع سيُضاف لاحقاً</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ar="تواصل معي" data-en="Get in touch">&lt;تواصل معي/&gt;</span>
+                <h2 class="section-title" data-ar="لنعمل معاً" data-en="Let's Work Together">لنعمل معاً</h2>
+                <p class="section-desc" data-ar="هل لديك مشروع في ذهنك؟ لا تتردد في التواصل معي" data-en="Have a project in mind? Don't hesitate to reach out">هل لديك مشروع في ذهنك؟ لا تتردد في التواصل معي</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 data-ar="واتساب" data-en="WhatsApp">واتساب</h4>
+                        <a href="https://wa.me/963944230485" target="_blank" dir="ltr">+963 944 230 485</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
+                        <a href="/cdn-cgi/l/email-protection#a2cfcdcac3cfc7c695c3cec3d191c6e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="375a585f565a525300565b5644045377505a565e5b1954585a">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/963944230485" target="_blank" class="social-link whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/mohamed7alas3d" target="_blank" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/mohamed7alas3d" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mohamed7alas3d" target="_blank" class="social-link github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message" data-ar="رسالتك" data-en="Your Message">رسالتك</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text" data-ar="محمد الأسعد" data-en="Mohamed Alas3d">محمد الأسعد</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text" data-ar="صُنع بـ ❤️ بواسطة محمد الأسعد © 2024" data-en="Made with ❤️ by Mohamed Alas3d © 2024">صُنع بـ ❤️ بواسطة محمد الأسعد © 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="script.js"></script><script type="module" src="./script.js"></script>
+</body>
+
+</html>
