@@ -840,6 +840,11 @@ html[dir="rtl"] .info-item:hover {
     justify-content: center;
     font-size: 3rem;
     color: rgba(255,255,255,0.3);
+
+    /* أضف هذه الأسطر */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slider-img.active {
