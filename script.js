@@ -282,25 +282,7 @@ function initProjectSliders() {
 
 // ===== Contact Form =====
 function initContactForm() {
-    const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Create mailto link
-        const mailtoLink = `mailto:mohamed7alas3d@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
-        window.open(mailtoLink, '_blank');
-
-        // Show toast
-        showToast(currentLang === 'ar' ? 'تم فتح تطبيق البريد الإلكتروني!' : 'Email app opened!');
-
-        form.reset();
-    });
+    // يتم إرسال النموذج من الكود الموجود في index.html
 }
 
 // ===== Toast =====
